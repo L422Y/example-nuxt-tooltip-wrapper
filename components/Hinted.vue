@@ -9,9 +9,11 @@
 <script setup>
 const runtimeConfig = useRuntimeConfig();
 let props = defineProps(['title', 'desc', 'type']);
+
 let title = props.type
   ? runtimeConfig.public.hints.types[props.type]['title']
   : props?.title;
+
 let desc = props.type
   ? runtimeConfig.public.hints.types[props.type]['desc']
   : props?.desc;
